@@ -64,15 +64,14 @@ In order to FTP backups to our Windows server, we will need to create a new FTP 
 5. For the Content Directory field, browse to the folder we previously created `C:\inetpub\ftproot\RITemplatesBackups`.
 6. Click Next.
 7. Select the appropriate IP address.
-8. Select Allow SSL and choose the appropriate certificate.
-9. Click Next.
-10. Select Basic for Authentication and do not check Anonymous.
-11. For Allow Access to, select Specified Users.
-12. Enter the user name you just created (RITemplatesBackups)
-13. Select Read and Write for Permissions.
-14. Next we need to change the port number. Select your new FTP site from the left side and then click Bindings from the right Actions pane.
-15. Double click your binding entry and change the port number to a port that is not already in use.
-16. Your new FTP site should now be running. There should be no stop icon above it in the left menu.
+8. Enter a port number that is not already in use.
+9. Select Allow SSL and choose the appropriate certificate.
+10. Click Next.
+11. Select Basic for Authentication and do not check Anonymous.
+12. For Allow Access to, select Specified Users.
+13. Enter the user name you just created (RITemplatesBackups)
+14. Select Read and Write for Permissions.
+15. Your new FTP site should now be running. There should be no stop icon above it in the left menu.
 
 ## Add New Firewall Rule
 
