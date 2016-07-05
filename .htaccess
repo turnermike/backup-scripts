@@ -1,0 +1,6 @@
+# deny direct access
+order deny,allow
+deny from all
+
+# allow access from these IPs
+allow from 127.0.0.1
