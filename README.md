@@ -12,7 +12,10 @@ Uses Curl to FTP files to a remote server. First command will change into the lo
 2. Change into public directory.
 3. Make a directory named '.backup'.
 4. Copy curl.sh to this directory.
-5. Open the file and modify the path in the first step to the directory that you wish to backup.
+5. Open the file and modify the path in the first step to the directory that you wish to backup. Then exit and save the file.
+6. Grant execute permissions, use the following command:
+    
+    chmod +x curl.sh
 
 ### Run It
 
