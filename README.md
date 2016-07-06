@@ -68,12 +68,14 @@ In order to FTP backups to our Windows server, we will need to create a new FTP 
 6. Click Next.
 7. Select the appropriate IP address.
 8. Enter a port number that is not already in use.
-9. Select Allow SSL and choose the appropriate certificate.
+9. Select No SSL.
 10. Click Next.
 11. Select Basic for Authentication and do not check Anonymous.
 12. For Allow Access to, select Specified Users.
 13. Enter the user name you just created (RITemplatesBackups)
 14. Select Read and Write for Permissions.
+15. Select SSL FTP Settings from the FTP site home screen.
+16. Select Allow SSL connections and click Apply.
 15. Your new FTP site should now be running. There should be no stop icon above it in the left menu.
 
 ## Add New Firewall Rule
