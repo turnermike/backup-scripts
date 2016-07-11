@@ -2,9 +2,13 @@
 
 These scripts are used for backing up data to a remote server. See down below for steps to setup a new FTP user on Windows Server 2012.
 
-## curl.sh
+## backup_images.sh
 
 Uses Curl to FTP files to a remote server. First command will change into the local directory that you wish to back up. Second command will copy the files via FTP.
+
+## backup_site_ci.sh
+
+Uses Curl to FTP files and a database dump to a remote server. The httpdocs directory and codeigniter directory are saved seperately. Since the codeigniter folder is not public on the production server.
 
 ### Setup Steps
 
