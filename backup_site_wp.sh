@@ -8,15 +8,15 @@ echo $(date)
 echo '=================================='
 
 # variables
-FTP_USER_PASS="BackupsUser:K#\$hdRe2%344X_s"                # FTP Username:Password
-FTP_PORT="236"                                              # FTP Port
-SOURCE_DIR="/var/www/vhosts/domain.com/httpdocs"     # Path to public directory (httpdocs/public_html)
-DESTINATION_DIR="domain.com"                            # Destination path on remote server. The backup location.
-MYSQL_HOST="localhost"                                      # MySQL host
-MYSQL_USER="username"                                       # MySQL user
-MYSQL_PASSWORD="password"                                   # MySQL password
-MYSQL_DATABASE="database_name"                              # MySQL database name
-DATE_TIME=$(date +%Y-%m-%d_%H-%M-%S)                        # Date/time stamp used for file names
+FTP_USER_PASS="BackupsUser:K#\$hdRe2%344X_s"        # FTP Username:Password
+FTP_PORT="236"                                      # FTP Port
+SOURCE_DIR="/var/www/vhosts/domain.com/httpdocs"    # Path to public directory (httpdocs/public_html)
+DESTINATION_DIR="domain.com"                        # Destination path on remote server. The backup location.
+MYSQL_HOST="localhost"                              # MySQL host
+MYSQL_USER="username"                               # MySQL user
+MYSQL_PASSWORD="password"                           # MySQL password
+MYSQL_DATABASE="database_name"                      # MySQL database name
+DATE_TIME=$(date +%Y-%m-%d_%H-%M-%S)                # Date/time stamp used for file names
 
 echo '-- change into public directory'
 cd $PUBLIC_SOURCE_DIR
@@ -30,9 +30,6 @@ find $MYSQL_DATABASE_EN'_'$DATE_TIME'.sql' -exec curl -u $FTP_USER_PASS --ftp-cr
 echo '-- delete the dump file'
 rm $MYSQL_DATABASE_EN'_'$DATE_TIME'.sql'
 
-# echo '-- find and copy public (httpdocs) files to server'
-# find . -type f -exec curl -u $FTP_USER_PASS --ftp-create-dirs -T {} ftp://216.86.147.25:$FTP_PORT/$DESTINATION_DIR/httpdocs/{} \;
-
 echo '-- zip the httpdocs directory'
 find . -type f -exec zip -rq $SOURCE_DIR/.backup/httpdocs.zip $SOURCE_DIR/* {} \;
 
@@ -45,5 +42,4 @@ find httpdocs.zip -type f -exec curl -u $FTP_USER_PASS --ftp-create-dirs -T {} f
 echo '-- removing httpdocs directory'
 rm $SOURCE_DIR/.backup/httpdocs.zip
 
-
-echo ''
+echo '=================================='
