@@ -6,17 +6,25 @@ These scripts are used for backing up data to a remote server. See down below fo
 
 Uses Curl to FTP files to a remote server. First command will change into the local directory that you wish to back up. Second command will copy the files via FTP.
 
-## backup_site_ci.sh
+## backup_site.sh (PHP/MySQL)
+
+Uses Curl to FTP files and a database dump to a remote server.
+
+## backup_site_ci.sh (CodeIgniter)
 
 Uses Curl to FTP files and a database dump to a remote server. The httpdocs directory and codeigniter directory are saved seperately. Since the codeigniter folder is not public on the production server.
+
+## backup_site_wp.sh (Wordpress)
+
+Uses Curl to FTP files and a database dump to a remote server. The httpdocs directory is zipped and the database is saved as .sql.
 
 ### Setup Steps
 
 1. SSH into webserver.
 2. Change into public directory.
 3. Make a directory named '.backup'.
-4. Copy curl.sh to this directory.
-5. Open the file and modify the path in the first step to the directory that you wish to backup. Then exit and save the file.
+4. Copy the appropriate file (backup_site.sh) to this directory.
+5. Open the file and update all variables.
 6. Grant execute permissions, use the following command:
     
     chmod +x curl.sh
