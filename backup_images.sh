@@ -7,8 +7,15 @@ echo '=================================='
 echo $(date)
 echo '=================================='
 
+# variables
+FTP_USER_PASS="BackupsUser:K#\$hdRe2%344X_s"                                                # FTP Username:Password
+FTP_PORT="236"                                                                              # FTP Port
+SOURCE_DIR="/var/www/vhosts/earlybirdornightowl.ca/httpdocs/library/images/user_generated"  # Source path on server. The content to backup.
+DESTINATION_DIR="giveusoneperiod.ca"                                                        # Destination path on remote server. The backup location.
+
+
 echo '-- change into user_generated directory'
-cd /var/www/vhosts/earlybirdornightowl.ca/httpdocs/library/images/user_generated
+cd $SOURCE_DIR
 
 # echo '-- find and copy files to server'
 # find . -type f -exec curl --user 'EBNOBackups:H@3f&$fh%ef' --ftp-create-dirs -T {} ftp://216.86.147.25:234/images/{} \;
