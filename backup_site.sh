@@ -28,7 +28,6 @@ echo '-- delete the dump file'
 rm $MYSQL_DATABASE'_'$DATE_TIME'.sql'
 
 echo '-- zip the httpdocs directory'
-# find . -type f -exec curl -u $FTP_USER_PASS --ftp-create-dirs -T {} ftp://216.86.147.25:$FTP_PORT/$DESTINATION_DIR/deploy/{} \;
 find . -type f -exec zip -rq $SOURCE_DIR/.backup/httpdocs.zip $SOURCE_DIR/* {} \;
 
 echo '-- change into httpdocs/.backup directory'
