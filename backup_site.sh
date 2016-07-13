@@ -31,7 +31,7 @@ echo '-- delete the dump file'
 rm $MYSQL_DATABASE'_'$DATE_TIME'.sql'
 
 echo '-- zip the httpdocs directory'
-find . -type f -exec zip -rq $SOURCE_DIR/.backup/httpdocs.zip $SOURCE_DIR/* {} \;
+find . -type f | zip -rq $SOURCE_DIR/.backup/httpdocs.zip $SOURCE_DIR/* {} \;
 
 echo '-- change into httpdocs/.backup directory'
 cd $SOURCE_DIR/.backup/
