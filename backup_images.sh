@@ -29,4 +29,6 @@ find user_generated_images.zip -type f -exec curl -u $FTP_USER_PASS --ftp-create
 echo '-- remove the zip file'
 rm ./user_generated_images.zip
 
+echo '-- all done'
+echo ''
 echo '=================================='

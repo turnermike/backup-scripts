@@ -42,4 +42,6 @@ find httpdocs.zip -type f -exec curl -u $FTP_USER_PASS --ftp-create-dirs -T {} f
 echo '-- removing httpdocs directory'
 rm $SOURCE_DIR/.backup/httpdocs.zip
 
+echo '-- all done'
 echo ''
+echo '=================================='
