@@ -31,7 +31,7 @@ find $MYSQL_DATABASE'_'$DATE_TIME'.sql' -exec curl -u $FTP_USER_PASS --ftp-creat
 echo '-- delete the dump file'
 rm $MYSQL_DATABASE'_'$DATE_TIME'.sql'
 
-echo '-- zipping the public/httpdocs directory, not including user generated images'
+echo '-- zipping the public/httpdocs directory'
 # find . -type f -not -path "*/library/images/user_generated/*" -exec zip -rq $PUBLIC_SOURCE_DIR/.backup/httpdocs.zip {} \;
 find . -type f -not -path "*/library/images/user_generated/*" | zip -rq $PUBLIC_SOURCE_DIR/.backup/httpdocs.zip -@
 
