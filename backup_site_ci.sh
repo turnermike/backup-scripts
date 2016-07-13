@@ -32,8 +32,7 @@ echo '-- delete the dump file'
 rm $MYSQL_DATABASE'_'$DATE_TIME'.sql'
 
 echo '-- zipping the public/httpdocs directory'
-# find . -type f -not -path "*/library/images/user_generated/*" -exec zip -rq $PUBLIC_SOURCE_DIR/.backup/httpdocs.zip {} \;
-find . -type f -not -path "*/library/images/user_generated/*" | zip -rq $PUBLIC_SOURCE_DIR/.backup/httpdocs.zip -@
+find . -type f | zip -rq $PUBLIC_SOURCE_DIR/.backup/httpdocs.zip -@
 
 echo '-- changing into codeigniter directory'
 cd $CI_SOURCE_DIR
