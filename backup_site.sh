@@ -1,5 +1,8 @@
 #! /bin/sh
 
+# crontab example - first day of each week at 5 am
+# 0 5 * * 1 /bin/sh  /var/www/vhosts/giveusoneperiod.ca/httpdocs/.backup/backup_site_ci.sh  >> /var/www/vhosts/giveusoneperiod.ca/httpdocs/.backup/cron.log 2>&1
+
 echo '=================================='
 echo $(date)
 echo '=================================='
