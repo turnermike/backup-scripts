@@ -53,5 +53,4 @@ echo '-- removing the codeigniter zip file'
 rm codeigniter.zip
 
 echo '-- all done'
-echo ''
 echo '=================================='

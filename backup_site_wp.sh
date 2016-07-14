@@ -43,5 +43,4 @@ echo '-- removing httpdocs directory'
 rm $SOURCE_DIR/.backup/httpdocs.zip
 
 echo '-- all done'
-echo ''
 echo '=================================='

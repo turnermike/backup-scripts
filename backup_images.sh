@@ -30,5 +30,4 @@ echo '-- remove the zip file'
 rm ./user_generated_images.zip
 
 echo '-- all done'
-echo ''
 echo '=================================='
